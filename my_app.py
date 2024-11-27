@@ -22,8 +22,9 @@ class MainWin(QWidget):
         self.layout.addWidget(self.hello_text, alignment = Qt.AlignLeft)
         self.layout.addWidget(self.instruction, alignment = Qt.AlignLeft)
         self.layout.addWidget(self.btn_next, alignment = Qt.AlignCenter)
+        self.setLayout(self.layout)
     def next_click(self):
-        self.tw = TestWin()
+        #self.tw = TestWin()
         self.hide()
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
