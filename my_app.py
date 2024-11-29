@@ -2,6 +2,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout
 from instr import*
 from second_win import*
+from final_win import*
 
 class MainWin(QWidget):
     def __init__(self):
@@ -24,7 +25,7 @@ class MainWin(QWidget):
         self.layout.addWidget(self.btn_next, alignment = Qt.AlignCenter)
         self.setLayout(self.layout)
     def next_click(self):
-        #self.tw = TestWin()
+        self.tw = TestWin()
         self.hide()
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
